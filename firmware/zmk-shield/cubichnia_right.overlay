@@ -1,0 +1,34 @@
+/* SPDX-License-Identifier: MIT */
+
+#include "cubichnia.dtsi"
+
+&kscan0 {
+	col-gpios
+		= <&pro_micro_a  8 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_d 15 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_a  1 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_a  2 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_a  3 GPIO_ACTIVE_HIGH>
+		, <&pro_micro_a  0 GPIO_ACTIVE_HIGH>
+		;
+};
+
+&default_transform {
+	col-offset = <6>;
+};
+
+&split_3x5_3_transform {
+	col-offset = <6>;
+};
+
+&split_3x5_3_transform {
+	col-offset = <6>;
+};
+
+&ortho_4x12_transform {
+	col-offset = <6>;
+};
+
+&ichnite_transform {
+	col-offset = <6>;
+};

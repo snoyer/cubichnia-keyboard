@@ -1,0 +1,9 @@
+{
+  "keyboard_name": "Cubichnia",
+  "manufacturer": "snoyer",
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x7986",
+    "device_version": "0.0.1"
+  }
+}

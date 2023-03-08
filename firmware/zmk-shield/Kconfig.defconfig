@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: MIT
+
+if SHIELD_CUBICHNIA_RIGHT
+	config ZMK_KEYBOARD_NAME
+		default "Cubichnia"
+	config ZMK_SPLIT_BLE_ROLE_CENTRAL
+		default y
+endif
+
+if SHIELD_CUBICHNIA_LEFT
+	config ZMK_KEYBOARD_NAME
+		default "Cubichnia*"
+endif
+
+if SHIELD_CUBICHNIA_LEFT || SHIELD_CUBICHNIA_RIGHT
+	config ZMK_SPLIT
+		default y
+endif

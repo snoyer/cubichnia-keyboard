@@ -1,0 +1,31 @@
+/* SPDX-License-Identifier: MIT */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define l(x) &kp x
+#define r(x) &kp LS(x)
+
+/ {
+	chosen {
+		zmk,matrix_transform = &default_transform;
+	};
+	keymap {
+		compatible = "zmk,keymap";
+		default_layer {
+			// |  a  |  b  |  c  |  d  |  e  |  f  |                    |  F  |  E  |  D  |  C  |  B  |  A  |
+			// |  g  |  h  |  i  |  j  |  k  |  l  |  m  |        |  M  |  L  |  K  |  J  |  I  |  H  |  G  |
+			// |  n  |  o  |  p  |  q  |  r  |  s  |  t  |        |  T  |  S  |  R  |  Q  |  P  |  O  |  N  |
+			//             |  u  |     |  v  |  w  |  x  |        |  X  |  W  |  V  |     |  U  |            
+
+			bindings = <
+				l(A)  l(B)  l(C)  l(D)  l(E)  l(F)                    r(F)  r(E)  r(D)  r(C)  r(B)  r(A)
+				l(G)  l(H)  l(I)  l(J)  l(K)  l(L)  l(M)        r(M)  r(L)  r(K)  r(J)  r(I)  r(H)  r(G)
+				l(N)  l(O)  l(P)  l(Q)  l(R)  l(S)  l(T)        r(T)  r(S)  r(R)  r(Q)  r(P)  r(O)  r(N)
+				            l(U)        l(V)  l(W)  l(X)        r(X)  r(W)  r(V)              r(U)      
+			>;
+		};
+	};
+};
